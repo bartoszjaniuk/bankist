@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/img/logo.svg" />
+    <title>Bankist &mdash; All payments in one place</title>
+    <script defer src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <h1 class="nav nav__welcome">All payments in one place</h1>
+      <svg class="logo">
+        <use xlink:href="img/sprite.svg#icon-library"></use>
+      </svg>
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input--user"
+        />
+        <input
+          type="password"
+          placeholder="pin"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+      <button class="login__input log-out">Log out</button>
+      <p class="session"></p>
+    </nav>
+    <main class="container">
+      <header class="header">
+        <h2 class="header header-text">Current balance</h2>
+        <h2 class="header header-date">Date 05/03/2037</h2>
+        <h1 class="header header__balance">3840€</h1>
+      </header>
+      <div class="card card__transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+      <div class="card card__request">
+        <h2>Request loan</h2>
+        <form class="form form--request">
+          <input
+            type="number"
+            class="form__input form__input--request-amount"
+          />
+          <button class="form__btn form__btn--request">&rarr;</button>
+          <label class="form__label form__label--request">Amount</label>
+        </form>
+      </div>
+      <div class="card card__close">
+        <h2>Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+      <div class="operations">
+        <div class="operations__row">
+          <div class="operations__type operations__type--deposit">
+            2 deposit
+          </div>
+          <div class="operations__date">3 days ago</div>
+          <div class="operations__value">4 000€</div>
+        </div>
+        <div class="operations__row">
+          <div class="operations__type operations__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="operations__date">24/01/2037</div>
+          <div class="operations__value">-378€</div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">0000€</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">0000€</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </footer>
+    </main>
+  </body>
+</html>
